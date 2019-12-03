@@ -23,7 +23,7 @@ app.post('/api/messages', (req, res) => {
     .create({
       from: process.env.TWILIO_PHONE_NUMBER,
       to: req.body.to,
-      body: req.body.body
+      body: 'ISmokeShop Team here, Welcome to the ismokeshop subscribe list :) '
     })
     .then(() => {
       res.send(JSON.stringify({ success: true }));

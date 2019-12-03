@@ -34,7 +34,6 @@ class SMSForm extends Component {
             submitting: false,
             message: {
               to: '',
-              body: ''
             }
           });
         } else {
@@ -60,21 +59,12 @@ class SMSForm extends Component {
         className={this.state.error ? 'error sms-form' : 'sms-form'}
       >
         <div>
-          <label htmlFor="to">To:</label>
+          <label htmlFor="to">Phone Number:</label>
           <input
             type="tel"
             name="to"
             id="to"
             value={this.state.message.to}
-            onChange={this.onHandleChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="body">Body:</label>
-          <textarea
-            name="body"
-            id="body"
-            value={this.state.message.body}
             onChange={this.onHandleChange}
           />
         </div>
